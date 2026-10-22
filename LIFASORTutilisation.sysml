@@ -29,11 +29,11 @@ package triDechets {
         use case nettoyerPoubelle {
             ref actor agententretien;
         }
-        use case verifierEtatSysteme {
+        use case verifieetatsystem {
             ref actor technicien;
         }
-        
-        use case confirguerSysteme {
+
+        use case confirgurerSysteme {
             ref actor responsable;
         }
     }
