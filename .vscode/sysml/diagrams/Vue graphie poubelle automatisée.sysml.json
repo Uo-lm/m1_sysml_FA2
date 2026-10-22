@@ -1,0 +1,277 @@
+{
+  "version": 9,
+  "structuredDefaults": "inherited",
+  "anchors": {
+    "PoubelleLIFASORT": {
+      "gv": {
+        "gvViews": {
+          "group": {
+            "layout": {
+              "PoubelleLIFASORT::Chassis": {
+                "x": -482.38573641220046,
+                "y": 120.7438214166045,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::Enveloppe": {
+                "x": -364.37917019052173,
+                "y": 309.29418681549873,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::TrappeEntree": {
+                "x": -421.044873701205,
+                "y": 209.74284449614743,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::ConvoyeurEntree": {
+                "x": -318.54243766724994,
+                "y": 408.6182310547437,
+                "parentKey": null,
+                "collapsedW": 123,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::CapteurOptique": {
+                "x": -74.95281825727467,
+                "y": 222.5094575347778,
+                "parentKey": null,
+                "collapsedW": 116,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::UniteTraitement": {
+                "x": -33.18074570935146,
+                "y": 334.55824645933046,
+                "parentKey": null,
+                "collapsedW": 123,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::MecanismeOrientation": {
+                "x": -132.50781320863973,
+                "y": 119.59403283574278,
+                "parentKey": null,
+                "collapsedW": 157,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::CompartimentCarton": {
+                "x": 224.33377884816866,
+                "y": 227.41639340386658,
+                "parentKey": null,
+                "collapsedW": 143,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::CompartimentMetal": {
+                "x": 192.38839643296149,
+                "y": 116.54473643410628,
+                "parentKey": null,
+                "collapsedW": 136,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::CompartimentAutresDechets": {
+                "x": 274.8204153647072,
+                "y": 436.8787850301959,
+                "parentKey": null,
+                "collapsedW": 191,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::CloisonsReglables": {
+                "x": 277.0222071881198,
+                "y": 343.42603551411776,
+                "parentKey": null,
+                "collapsedW": 136,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::CapteurMoteur": {
+                "x": 590.5403377064453,
+                "y": 316.7956629974142,
+                "parentKey": null,
+                "collapsedW": 109,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::DetecteurBlocage": {
+                "x": 5.959542525461629,
+                "y": 422.54729114017687,
+                "parentKey": null,
+                "collapsedW": 130,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::ArretAutomatique": {
+                "x": 484.6446208438216,
+                "y": 112.69496332898342,
+                "parentKey": null,
+                "collapsedW": 130,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::AlerteOperateur": {
+                "x": 550.0417300271855,
+                "y": 218.20851960354378,
+                "parentKey": null,
+                "collapsedW": 123,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::Piston": {
+                "x": 885.8160477664038,
+                "y": 238.75074270214358,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::Actionneur": {
+                "x": 933.065982711148,
+                "y": 137.0055978354303,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::CapteurPosition": {
+                "x": 618.1933470877868,
+                "y": 413.6896270329041,
+                "parentKey": null,
+                "collapsedW": 123,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::CapteursNiveau": {
+                "x": 862.8835442713064,
+                "y": 375.3539500421774,
+                "parentKey": null,
+                "collapsedW": 116,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::UniteCommunication": {
+                "x": 1136.5492959797643,
+                "y": 332.2895082120569,
+                "parentKey": null,
+                "collapsedW": 143,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::InterfaceAlerte": {
+                "x": 1238.0468281792855,
+                "y": 107.49699359307925,
+                "parentKey": null,
+                "collapsedW": 123,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::Automate": {
+                "x": 1526.3770088604017,
+                "y": 230.83141134011564,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::ModuleEntreesSorties": {
+                "x": 1542.063238725923,
+                "y": 125.17862284187018,
+                "parentKey": null,
+                "collapsedW": 157,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::Alimentation": {
+                "x": 1480.6562937518088,
+                "y": 337.56396792279094,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::InterfaceOperateur": {
+                "x": 1180.7565931399351,
+                "y": 224.01607854000142,
+                "parentKey": null,
+                "collapsedW": 143,
+                "collapsedH": 58
+              },
+              "PoubelleLIFASORT::StructurePrincipale": {
+                "x": -440.5673361544334,
+                "y": -47.56391345782929,
+                "parentKey": null,
+                "collapsedW": 150,
+                "collapsedH": 114
+              },
+              "PoubelleLIFASORT::SystemeDeTri": {
+                "x": -5.16113037161287,
+                "y": -34.888219651241485,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 100
+              },
+              "PoubelleLIFASORT::Compartiments": {
+                "x": 260.1296579722858,
+                "y": -40.595632223816665,
+                "parentKey": null,
+                "collapsedW": 109,
+                "collapsedH": 114
+              },
+              "PoubelleLIFASORT::SystemeAntiBlocage": {
+                "x": 545.3631365885844,
+                "y": -49.803506024139445,
+                "parentKey": null,
+                "collapsedW": 143,
+                "collapsedH": 114
+              },
+              "PoubelleLIFASORT::SystemeDeCompactage": {
+                "x": 910.9065433825377,
+                "y": -24.83970737896314,
+                "parentKey": null,
+                "collapsedW": 150,
+                "collapsedH": 100
+              },
+              "PoubelleLIFASORT::SurveillanceRemplissage": {
+                "x": 1198.101860742489,
+                "y": -8.808938300951834,
+                "parentKey": null,
+                "collapsedW": 177,
+                "collapsedH": 86
+              },
+              "PoubelleLIFASORT::SystemeDeCommande": {
+                "x": 1563.7807074977602,
+                "y": -32.574670814674505,
+                "parentKey": null,
+                "collapsedW": 136,
+                "collapsedH": 100
+              },
+              "PoubelleLIFASORT::PoubelleAutomatisee": {
+                "x": 513.6114107759397,
+                "y": -425.96455231222694,
+                "parentKey": null,
+                "collapsedW": 150,
+                "collapsedH": 170
+              },
+              "PoubelleLIFASORT::poubelle": {
+                "x": 570.0699344872962,
+                "y": -559.8594119855475,
+                "parentKey": null,
+                "collapsedW": 104,
+                "collapsedH": 58
+              }
+            },
+            "ports": {},
+            "edgeRoutes": {},
+            "edgeAnchors": {},
+            "edgeGeometry": {
+              "definedBy:PoubelleLIFASORT::poubelle->PoubelleLIFASORT::PoubelleAutomatisee": {
+                "sourceHandle": "bottom",
+                "targetHandle": "top",
+                "path": "M 622.0699344872962,-501.85941198554747L 617.3649979308257,-395.4138659601606",
+                "lineStyle": "straight",
+                "sourcePoint": {
+                  "x": 622.0699344872962,
+                  "y": -501.85941198554747
+                },
+                "targetPoint": {
+                  "x": 617.3649979308257,
+                  "y": -395.4138659601606
+                },
+                "label": {
+                  "x": 619.717466209061,
+                  "y": -448.63663897285403
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
