@@ -2,7 +2,7 @@
 package triDechets {
 
     package parts {
-        part def Utilisateur;
+        part def Technicien;
         part def AgentEntretien;
         part def Employer;
         part def Responsabledeligne;
@@ -13,25 +13,28 @@ package triDechets {
 
         private import triDechets::parts::*;
 
-        actor utilisateur : Utilisateur;
-        actor agent : AgentEntretien;
-        actor agent : Employer;
-        actor agent : Responsabledeligne;
+        actor agententretien : AgentEntretien;
+        actor employer: Employer;
+        actor responsable : Responsabledeligne;
+        actor technicien: Technicien;
 
         use case trierDechet {
             ref actor employer;
         }
 
         use case viderBacs {
-            ref actor agent;
+            ref actor agententretien;
         }
 
         use case nettoyerPoubelle {
-            ref actor agent;
+            ref actor agententretien;
         }
-
         use case verifierEtatSysteme {
-            ref actor agent;
+            ref actor technicien;
+        }
+        
+        use case confirguerSysteme {
+            ref actor responsable;
         }
     }
 }
