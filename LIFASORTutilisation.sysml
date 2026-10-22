@@ -15,8 +15,8 @@ package triDechets {
 
         actor utilisateur : Utilisateur;
         actor agent : AgentEntretien;
-        actor agent : employer;
-        actor agent : responsabledeligne;
+        actor agent : Employer;
+        actor agent : Responsabledeligne;
 
         use case trierDechet {
             ref actor employer;
