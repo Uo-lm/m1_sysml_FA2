@@ -1,8 +1,13 @@
+<<<<<<< HEAD
+=======
 
 package lifasort {
+>>>>>>> e30c4263dc256d5a25dffd8b5eda1df5731b2f82
 
-    private import ScalarValues::Boolean;
+package triDechets {
 
+<<<<<<< HEAD
+=======
     /* Definition des acteurs */
     part def Employe;
     part def AgentCollecte;
@@ -18,15 +23,22 @@ package lifasort {
     part def Dechets;
 
     /* Diagramme de contexte */
+>>>>>>> e30c4263dc256d5a25dffd8b5eda1df5731b2f82
     part def Contexte {
 
-        part employe: Employe;
-        part agentCollecte: AgentCollecte;
-        part technicien: TechnicienMaintenance;
-        part responsable: ResponsableUsine;
+        part LIFASORT;
+        part utilisateur;
+        part agentEntretien;
+        part dechet;
+        part reseauElectrique;
 
-        part lifasort: SystemeLIFASORT;
+        flow utilise from utilisateur to LIFASORT;
+        flow entretient from agentEntretien to LIFASORT;
+        flow trie from dechet to LIFASORT;
+        flow alimente from reseauElectrique to LIFASORT;
 
+<<<<<<< HEAD
+=======
         part supervision: Supervision;
         part reseauElectrique: ReseauElectrique;
         part dechets: Dechets;
@@ -38,5 +50,6 @@ package lifasort {
         flow alimente from reseauElectrique to lifasort;
         flow trie from dechets to lifasort;
         flow transmetAlertes from lifasort to supervision;
+>>>>>>> e30c4263dc256d5a25dffd8b5eda1df5731b2f82
     }
 }
