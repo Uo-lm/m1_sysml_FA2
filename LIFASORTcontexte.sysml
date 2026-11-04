@@ -10,13 +10,14 @@ package triDechets {
         part reseauElectrique;
         part supervision;
         part responsableduligne;
+        part bacsDeTri;
         flow utilise from empolye to LIFASORT;
-        flow entretient from agentEntretien to LIFASORT;
         flow tries from LIFASORT to dechets;
         flow alimente from reseauElectrique to LIFASORT;
         flow recevoiralertes from LIFASORT to supervision;
         flow configure from responsableduligne to LIFASORT;
-        
+        flow sortDechetsTries from LIFASORT to bacsDeTri;
+        flow collecteDechetsTries from agentEntretien to bacsDeTri;
         
     }
 }
