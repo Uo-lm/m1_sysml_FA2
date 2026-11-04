@@ -115,12 +115,13 @@ specificationsLIFASORT
 
 ---
 
+## Auteur
+- Foudil CHATRA
+- Lillia Hadiouche 
+- Hugo Leiber-Masson
+- Fatima Ourkia
+
+
 
 utilisation 
 conteneur a ajouter sa rajoute des exigence
-
-## Auteur
-- Foudil CHATRA
-- Lillia
-- Hugo
-- Fatime 
