@@ -67,45 +67,6 @@ La `part def Contexte` décrit LIFASORT et les éléments extérieurs avec lesqu
 | `verifieetatsystem` | Technicien | Vérifier l'état de fonctionnement |
 | `confirgurerSysteme` | Responsable de ligne | Configurer les paramètres (catégories, cloisons, seuils) |
 
----
-
-## 3. Exigences
-
-Les exigences sont organisées en arbre par spécialisation (`specializes`), à partir d'une exigence racine `specificationsLIFASORT`.
-
-```
-specificationsLIFASORT
-├── fonctions
-│   ├── triAutomatique
-│   │   ├── tauxTri                  ≥ 95 % de déchets bien triés
-│   │   └── tempsTri                 < 3 s entre dépôt et compartiment
-│   ├── viderBacs
-│   ├── nettoyerPoubelle
-│   ├── verifierEtatSysteme
-│   ├── configurerSysteme
-│   ├── compactageDechets
-│   │   └── tauxCompactage           volume réduit d'un facteur ≥ 3
-│   ├── surveillanceRemplissage
-│   │   └── seuilAlerteRemplissage   alerte à 80 % de remplissage
-│   └── protectionAntiBlocage
-│       └── tempsArretBlocage        arrêt < 1 s après blocage
-├── interactionsMaterielles
-│   ├── depotDechet                  trappe d'entrée
-│   ├── interfaceOperateur           consultation et configuration locales
-│   ├── cloisonsReglables            volume des compartiments ajustable
-│   ├── accesCompartiments           compartiments accessibles et amovibles
-│   ├── compatibiliteElectrique      230 V / 50 Hz
-│   ├── envoiAlertes                 remplissage, blocage, panne → supervision
-│   └── communicationReseau          liaison filaire ou sans fil
-└── contraintes
-    ├── capaciteCompartiment         ≥ 60 L par compartiment
-    ├── coutRevient                  < 3 000 €
-    ├── encombrement                 < 1 m × 0,8 m au sol, hauteur < 1,5 m
-    ├── consommationElectrique       < 500 W
-    ├── niveauSonore                 < 60 dB
-    └── securiteUtilisateur          aucune pièce mobile accessible
-```
-
 ### Origine des exigences
 
 - **Cas d'utilisation** : `triAutomatique`, `viderBacs`, `nettoyerPoubelle`, `verifierEtatSysteme`, `configurerSysteme`
