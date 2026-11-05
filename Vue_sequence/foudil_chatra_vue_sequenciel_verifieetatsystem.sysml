@@ -19,7 +19,6 @@ package triDechets {
     package sequences {
         private import triDechets::parts::*;
 
-        // S1 : identifiants refusés
         occurrence verifierEtatSystemeS1 {
             part interfaceOperateur : InterfaceOperateur;
             part automate : Automate;
@@ -34,7 +33,6 @@ package triDechets {
             message retourOperateur from automate to interfaceOperateur;
         }
 
-        // S2 : diagnostic sans rapport
         occurrence verifierEtatSystemeS2 {
             part interfaceOperateur : InterfaceOperateur;
             part automate : Automate;
@@ -55,7 +53,6 @@ package triDechets {
             message retourOperateur from automate to interfaceOperateur;
         }
 
-        // S3 : diagnostic + envoi du rapport
         occurrence verifierEtatSystemeS3 {
             part interfaceOperateur : InterfaceOperateur;
             part automate : Automate;
