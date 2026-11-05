@@ -1,40 +1,45 @@
-
 package triDechets {
-
     package parts {
-        part def Technicien;
-        part def AgentEntretien;
-        part def Employer;
-        part def Responsabledeligne;
+        part def LIFASORT;
 
+        part def Employe;
+        part def AgentEntretien;
+        part def Technicien;
+        part def ResponsableDeLigne;
+
+        part def Convoyeur;
+        part def ReseauElectrique;
+        part def Supervision;
+        part def BennesRecyclage;
     }
 
     package useCases {
 
         private import triDechets::parts::*;
 
-        actor agententretien : AgentEntretien;
-        actor employer: Employer;
-        actor responsable : Responsabledeligne;
-        actor technicien: Technicien;
-
         use case trierDechet {
-            ref actor employer;
+            subject lifasort : LIFASORT;
+            actor employe : Employe;
         }
 
         use case viderBacs {
-            ref actor agententretien;
+            subject lifasort : LIFASORT;
+            actor agentEntretien : AgentEntretien;
         }
 
         use case nettoyerPoubelle {
-            ref actor agententretien;
-        }
-        use case verifieetatsystem {
-            ref actor technicien;
+            subject lifasort : LIFASORT;
+            actor agentEntretien : AgentEntretien;
         }
 
-        use case confirgurerSysteme {
-            ref actor responsable;
+        use case verifierEtatSysteme {
+            subject lifasort : LIFASORT;
+            actor technicien : Technicien;
+        }
+
+        use case configurerSysteme {
+            subject lifasort : LIFASORT;
+            actor responsableDeLigne : ResponsableDeLigne;
         }
     }
 }

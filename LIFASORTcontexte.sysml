@@ -1,23 +1,27 @@
-
 package triDechets {
 
-    part def Contexte {
+    package contexte {
 
-        part LIFASORT;
-        part empolye;
-        part agentEntretien;
-        part convoyeur;
-        part reseauElectrique;
-        part supervision;
-        part responsableduligne;
-        part bacsDeTri;
-        flow utilise from empolye to LIFASORT;
-        flow envoiedechets from convoyeur  to LIFASORT;
-        flow alimente from reseauElectrique to LIFASORT;
-        flow recevoiralertes from LIFASORT to supervision;
-        flow configure from responsableduligne to LIFASORT;
-        flow sortDechetsTries from LIFASORT to bacsDeTri;
-        flow collecteDechetsTries from agentEntretien to LIFASORT;
-        
+        private import triDechets::parts::*;
+
+        part def Contexte {
+            part lifasort : LIFASORT;
+            part employe : Employe;
+            part agentEntretien : AgentEntretien;
+            part technicien : Technicien;
+            part responsableDeLigne : ResponsableDeLigne;
+            part convoyeur : Convoyeur;
+            part reseauElectrique : ReseauElectrique;
+            part supervision : Supervision;
+            part bennesRecyclage : BennesRecyclage;
+            flow deposeDechet from employe to lifasort;
+            flow envoiDechets from convoyeur to lifasort;
+            flow alimente from reseauElectrique to lifasort;
+            flow envoiAlertes from lifasort to supervision;
+            flow configure from responsableDeLigne to lifasort;
+            flow verifieEtat from technicien to lifasort;
+            flow collecteDechetsTries from lifasort to agentEntretien;
+            flow deposeDechetsTries from agentEntretien to bennesRecyclage;
+        }
     }
 }
