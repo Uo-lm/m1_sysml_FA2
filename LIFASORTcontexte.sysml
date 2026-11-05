@@ -20,7 +20,7 @@ package triDechets {
             flow envoiAlertes from lifasort to supervision;
             flow configure from responsableDeLigne to lifasort;
             flow verifieEtat from technicien to lifasort;
-            flow collecteDechetsTries from lifasort to agentEntretien;
+            flow collecteDechetsTries from agentEntretien to lifasort;
             flow deposeDechetsTries from agentEntretien to bennesRecyclage;
         }
     }

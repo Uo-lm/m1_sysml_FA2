@@ -2,6 +2,7 @@ package triDechets {
 
     package requirements {
 
+
         requirement specificationsLIFASORT {
             doc /* le système doit répondre aux catégories d'exigences listées ci-dessous */
         }
@@ -99,6 +100,7 @@ package triDechets {
         requirement securiteUtilisateur :> contraintes {
             doc /* aucune pièce mobile (orientation, piston) ne doit être accessible à l'utilisateur en fonctionnement */
         }
+
     }
 
     package tracabilite {
@@ -108,4 +110,5 @@ package triDechets {
         dependency from triDechets::requirements::verifierEtatSysteme to triDechets::useCases::verifierEtatSysteme;
         dependency from triDechets::requirements::configurerSysteme to triDechets::useCases::configurerSysteme;
     }
+    
 }
