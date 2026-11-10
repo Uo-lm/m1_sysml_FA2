@@ -9,7 +9,10 @@ Tout le modèle se trouve dans le package racine `triDechets`. Il est découpé 
 |---|---|---|
 | `LIFASORTutilisation.sysml` | `parts`, `useCases` | Les définitions des éléments, les acteurs et les cas d'utilisation |
 | `LIFASORTcontexte.sysml` | `contexte` | Le système dans son environnement et ses flux avec l'extérieur |
-| `vue_exigences.sysml` | `requirements`, `tracabilite` | L'arbre des exigences et les liens avec les cas d'utilisation |
+| `vue_exigences.sysml` | `requirements`, `tracabilite`, `verifications` | L'arbre des exigences, la traçabilité et les vérifications |
+| `Vue_générale_lifasort_fati.sysml` | `Composants`, `SousSystemes`, `Architecture` | La décomposition matérielle du système |
+| `vue_interconnexions.sysml` | `LIFASORT_Global` | Les connexions entre les composants |
+| `MatriceAllocation_HLM.sysml` | `MatriceAllocationLIFASORT` | L'allocation des fonctions et exigences vers les composants |
 
 ---
 
@@ -26,6 +29,7 @@ Tout le modèle se trouve dans le package racine `triDechets`. Il est découpé 
 | `ReseauElectrique` | Alimentation électrique 230 V / 50 Hz |
 | `Supervision` | Poste de supervision qui reçoit les alertes |
 | `BennesRecyclage` | Bennes de l'entreprise où l'agent dépose les déchets triés |
+| `ConteneurDechets` | Conteneur amovible intégré à LIFASORT pour stocker les déchets triés |
 
 ---
 
@@ -73,9 +77,13 @@ Chaque cas d'utilisation a pour sujet `lifasort : LIFASORT` et déclare son acte
 
 ---
 
-## 5. Traçabilité – package `tracabilite`
+## 5. Traçabilité et vérification
 
 Chaque exigence issue d'un cas d'utilisation est reliée à ce cas par une `dependency`.
+Les exigences fonctionnelles et matérielles sont également reliées aux éléments qui les
+satisfont par `satisfy`. Les exigences mesurables et les contraintes sont associées à des
+cas de vérification par `verify`. Les exigences relatives aux conteneurs sont définies
+dans `vue_exigences.sysml` et allouées dans `MatriceAllocation_HLM.sysml`.
 
 | Exigence | Cas d'utilisation |
 |---|---|

@@ -21,6 +21,7 @@ package LIFASORT_VueGenerale {
         part def BacCarton;
         part def BacMetal;
         part def BacAutres;
+        part def ConteneurDechets;
         part def CloisonsMobiles;
 
         /* Protection */
@@ -69,6 +70,7 @@ package LIFASORT_VueGenerale {
             part carton : BacCarton;
             part metal : BacMetal;
             part autres : BacAutres;
+            part conteneurs : ConteneurDechets[3];
             part cloisons : CloisonsMobiles;
         }
 
@@ -131,9 +133,9 @@ package LIFASORT_VueGenerale {
         part def Employe;
         part def AgentEntretien;
         part def Technicien;
-        part def ResponsableUsine;
+        part def ResponsableDeLigne;
 
-        part def ConvoyeurLigne;
+        part def Convoyeur;
         part def ReseauElectrique;
         part def DechetsEntrants;
         part def DechetsTries;

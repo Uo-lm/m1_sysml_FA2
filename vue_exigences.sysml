@@ -101,6 +101,16 @@ package triDechets {
             doc /* aucune pièce mobile (orientation, piston) ne doit être accessible à l'utilisateur en fonctionnement */
         }
 
+        requirement conteneurDechets :> interactionsMaterielles {
+            doc /* le système doit intégrer des conteneurs amovibles pour stocker les déchets triés */
+        }
+        requirement capaciteConteneur :> conteneurDechets {
+            doc /* chaque conteneur doit avoir une capacité d'au moins 60 L */
+        }
+        requirement accesConteneur :> conteneurDechets {
+            doc /* chaque conteneur doit être accessible pour le vidage et le nettoyage */
+        }
+
     }
 
     package tracabilite {
@@ -109,6 +119,66 @@ package triDechets {
         dependency from triDechets::requirements::nettoyerPoubelle to triDechets::useCases::nettoyerPoubelle;
         dependency from triDechets::requirements::verifierEtatSysteme to triDechets::useCases::verifierEtatSysteme;
         dependency from triDechets::requirements::configurerSysteme to triDechets::useCases::configurerSysteme;
+
+        satisfy requirement triDechets::requirements::triAutomatique by triDechets::useCases::trierDechet;
+        satisfy requirement triDechets::requirements::viderBacs by triDechets::useCases::viderBacs;
+        satisfy requirement triDechets::requirements::nettoyerPoubelle by triDechets::useCases::nettoyerPoubelle;
+        satisfy requirement triDechets::requirements::verifierEtatSysteme by triDechets::useCases::verifierEtatSysteme;
+        satisfy requirement triDechets::requirements::configurerSysteme by triDechets::useCases::configurerSysteme;
+        satisfy requirement triDechets::requirements::compactageDechets by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::surveillanceRemplissage by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::protectionAntiBlocage by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::depotDechet by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::receptionConvoyeur by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::interfaceOperateur by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::cloisonsReglables by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::accesCompartiments by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::compatibiliteElectrique by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::communicationReseau by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::envoiAlertes by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::conteneurDechets by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::capaciteConteneur by triDechets::parts::LIFASORT;
+        satisfy requirement triDechets::requirements::accesConteneur by triDechets::parts::LIFASORT;
     }
-    
+
+    package verifications {
+        verification def VerifierPerformancesTri {
+            objective verifierTauxEtTemps {
+                verify triDechets::requirements::tauxTri;
+                verify triDechets::requirements::tempsTri;
+            }
+        }
+        verification def VerifierCompactage {
+            objective verifierReductionVolume {
+                verify triDechets::requirements::tauxCompactage;
+            }
+        }
+        verification def VerifierRemplissage {
+            objective verifierSeuilAlerte {
+                verify triDechets::requirements::seuilAlerteRemplissage;
+            }
+        }
+        verification def VerifierArretBlocage {
+            objective verifierTempsArret {
+                verify triDechets::requirements::tempsArretBlocage;
+            }
+        }
+        verification def VerifierContraintes {
+            objective verifierContraintesSysteme {
+                verify triDechets::requirements::coutRevient;
+                verify triDechets::requirements::encombrement;
+                verify triDechets::requirements::consommationElectrique;
+                verify triDechets::requirements::niveauSonore;
+                verify triDechets::requirements::securiteUtilisateur;
+            }
+        }
+        verification def VerifierConteneurs {
+            objective verifierCapaciteEtAcces {
+                verify triDechets::requirements::capaciteCompartiment;
+                verify triDechets::requirements::capaciteConteneur;
+                verify triDechets::requirements::accesConteneur;
+            }
+        }
+    }
+
 }

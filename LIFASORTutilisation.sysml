@@ -1,6 +1,8 @@
 package triDechets {
     package parts {
-        part def LIFASORT;
+        part def LIFASORT {
+            part conteneurs : ConteneurDechets[3];
+        }
 
         part def Employe;
         part def AgentEntretien;
@@ -11,6 +13,7 @@ package triDechets {
         part def ReseauElectrique;
         part def Supervision;
         part def BennesRecyclage;
+        part def ConteneurDechets;
     }
 
     package useCases {

@@ -3,19 +3,21 @@ package MatriceAllocationLIFASORT {
 
     part def StructurePrincipale;
     part def SystemeDeTri;
-    part def Compartiments;
+    part def StockageAdaptable;
     part def SystemeAntiBlocage;
     part def SystemeDeCompactage;
     part def SurveillanceRemplissage;
     part def SystemeDeCommande;
+    part def ConteneurDechets;
 
     part structure : StructurePrincipale;
     part tri : SystemeDeTri;
-    part stockage : Compartiments;
+    part stockage : StockageAdaptable;
     part antiBlocage : SystemeAntiBlocage;
     part compactage : SystemeDeCompactage;
     part surveillance : SurveillanceRemplissage;
     part commande : SystemeDeCommande;
+    part conteneurs : ConteneurDechets[3];
 
     action triAutomatique;
     action viderBacs;
@@ -33,6 +35,20 @@ package MatriceAllocationLIFASORT {
     action compatibiliteElectrique;
     action communicationReseau;
     action envoiAlertes;
+    action tauxTri;
+    action tempsTri;
+    action tauxCompactage;
+    action seuilAlerteRemplissage;
+    action tempsArretBlocage;
+    action capaciteCompartiment;
+    action coutRevient;
+    action encombrement;
+    action consommationElectrique;
+    action niveauSonore;
+    action securiteUtilisateur;
+    action conteneurDechets;
+    action capaciteConteneur;
+    action accesConteneur;
 
     allocate triAutomatique to tri;
     allocate triAutomatique to commande;
@@ -78,5 +94,22 @@ package MatriceAllocationLIFASORT {
     allocate envoiAlertes to surveillance;
     allocate envoiAlertes to antiBlocage;
     allocate envoiAlertes to commande;
+
+    allocate tauxTri to tri;
+    allocate tauxTri to commande;
+    allocate tempsTri to tri;
+    allocate tempsTri to commande;
+    allocate tauxCompactage to compactage;
+    allocate seuilAlerteRemplissage to surveillance;
+    allocate tempsArretBlocage to antiBlocage;
+    allocate capaciteCompartiment to stockage;
+    allocate coutRevient to structure;
+    allocate encombrement to structure;
+    allocate consommationElectrique to commande;
+    allocate niveauSonore to structure;
+    allocate securiteUtilisateur to structure;
+    allocate conteneurDechets to conteneurs;
+    allocate capaciteConteneur to conteneurs;
+    allocate accesConteneur to conteneurs;
 
 }
