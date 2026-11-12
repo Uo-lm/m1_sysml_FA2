@@ -18,6 +18,10 @@ package LIFASORT_Global {
     part def ZoneReception;
     part def CloisonsReglables;
     part def ActionneurCloisons;
+    part def Alimentation;
+    part def CapteurBlocage;
+    part def ArretAutomatique;
+    part def UniteCommunication;
 
     /* Vue d'interconnexion globale */
 
@@ -25,11 +29,14 @@ package LIFASORT_Global {
 
         /* Commande principale */
         part controleur: ControleurCentral;
+        part alimentation: Alimentation;
 
         /* Detection */
         part capteurPresence: CapteurPresence;
         part capteurOptique: CapteurOptique;
         part capteurRemplissage: CapteurRemplissage;
+        part capteurBlocage: CapteurBlocage;
+        part arretAutomatique: ArretAutomatique;
 
         /* Reception et tri */
         part zoneReception: ZoneReception;
@@ -46,15 +53,19 @@ package LIFASORT_Global {
 
         /* Surveillance */
         part supervision: Supervision;
+        part uniteCommunication: UniteCommunication;
 
         /* Vidage et nettoyage */
         part dispositifAcces: DispositifAcces;
 
         /* Connexions de detection */
+        connect alimentation to controleur;
         connect zoneReception to capteurPresence;
         connect capteurPresence to controleur;
         connect capteurOptique to controleur;
         connect capteurRemplissage to controleur;
+        connect capteurBlocage to controleur;
+        connect controleur to arretAutomatique;
 
         /* Connexions du tri */
         connect controleur to mecanismeTri;
@@ -71,7 +82,8 @@ package LIFASORT_Global {
         connect cloisons to bacs;
 
         /* Surveillance et alertes */
-        connect controleur to supervision;
+        connect controleur to uniteCommunication;
+        connect uniteCommunication to supervision;
 
         /* Vidage et nettoyage */
         connect dispositifAcces to bacs;
@@ -79,5 +91,4 @@ package LIFASORT_Global {
 
     }
 }
-
 

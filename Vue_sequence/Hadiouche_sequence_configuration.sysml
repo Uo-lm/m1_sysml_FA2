@@ -5,7 +5,7 @@ package SequenceConfiguration {
     part def IHM;
     part def AutomateLIFASORT;
 
-    occurrence def ConfigurerSysteme {
+    occurrence def configurerSysteme {
 
         part responsable : Responsable {
             event occurrence demande;
@@ -55,5 +55,51 @@ package SequenceConfiguration {
             then envoyerPourcentages
             then confirmerConfiguration
             then afficherConfirmation;
+    }
+
+    occurrence def configurationInvalide {
+
+        part responsable : Responsable {
+            event occurrence saisieInvalide;
+            then event occurrence nouvelleSaisie;
+        }
+
+        part ihm : IHM {
+            event occurrence recoitSaisieInvalide;
+            then event occurrence afficheErreur;
+            then event occurrence recoitNouvelleSaisie;
+            then event occurrence transmetNouvelleSaisie;
+        }
+
+        part automate : AutomateLIFASORT {
+            event occurrence recoitParametresInvalides;
+            then event occurrence detecteErreur;
+        }
+
+        message saisirConfigurationInvalide
+            from responsable.saisieInvalide
+            to ihm.recoitSaisieInvalide;
+
+        message controlerConfiguration
+            from ihm.recoitSaisieInvalide
+            to automate.recoitParametresInvalides;
+
+        message signalerErreur
+            from automate.detecteErreur
+            to ihm.afficheErreur;
+
+        message demanderNouvelleSaisie
+            from ihm.recoitNouvelleSaisie
+            to responsable.nouvelleSaisie;
+
+        message ressaisirConfiguration
+            from responsable.nouvelleSaisie
+            to ihm.transmetNouvelleSaisie;
+
+        first saisirConfigurationInvalide
+            then controlerConfiguration
+            then signalerErreur
+            then demanderNouvelleSaisie
+            then ressaisirConfiguration;
     }
 }

@@ -154,6 +154,6 @@ package LIFASORT_VueGenerale {
 
         use case def VerifierEtatSysteme;
 
-        use case def ConfigurerSysteme;
+        use case def configurerSysteme;
     }
 }

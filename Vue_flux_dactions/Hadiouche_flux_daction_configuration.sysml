@@ -3,7 +3,7 @@ package ConfigurationLIFASORT {
 
     private import ScalarValues::*;
 
-    action def ConfigurerSysteme {
+    action def configurerSysteme {
 
         attribute sommeEgale100 : Boolean;
         attribute limitesRespectees : Boolean;

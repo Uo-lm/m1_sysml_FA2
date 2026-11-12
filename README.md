@@ -104,5 +104,3 @@ dans `vue_exigences.sysml` et allouées dans `MatriceAllocation_HLM.sysml`.
 
 
 
-utilisation 
-conteneur a ajouter sa rajoute des exigence
